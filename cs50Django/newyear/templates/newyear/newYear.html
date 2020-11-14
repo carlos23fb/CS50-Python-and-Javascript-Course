@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Is new year?</title>
+    <link rel="stylesheet" href="{% static 'newyear/styles.css' %}">
 </head>
-<style>
-    h1{
-        font-family: Arial;
-    }
-</style>
 <body>
     <h1>Is it new year?</h1>
     <br>
 
     {% if newyear %}
         <h1>Yes</h1>
+        <img src="https://i.pinimg.com/originals/08/5c/4a/085c4ad92bd08fc87aac712ae94319f8.jpg" alt="salem-happy">
     {% else %}
         <h1>No :(</h1>
         <img src="https://data.whicdn.com/images/57891033/original.gif" alt="salem-sad">
