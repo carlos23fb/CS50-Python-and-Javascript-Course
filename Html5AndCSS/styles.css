@@ -1,0 +1,28 @@
+#foo {
+    color: tomato;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.baz{
+    color: thistle;
+    font-family: monospace;
+    font-weight: lighter;
+}
+
+ul  ul  li{
+    color: cyan;
+}
+
+a[href="facebook.com"]{
+color: darkcyan;
+}
+
+
+button{
+    color: darkcyan;
+    background-color: wheat;
+}
+button:hover{
+    background-color: rgb(226, 223, 217);
+}
