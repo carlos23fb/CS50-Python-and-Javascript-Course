@@ -1,5 +1,5 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
+from django.http import HttpResponse
 import datetime
 # Create your views here.
 
@@ -13,3 +13,6 @@ def newYear(request):
     return render(request, "newyear/newYear.html", {
         "newyear": now.month == 1 and now.day == 1
     })
+
+def hello(request):
+    return HttpResponse("Hi")
