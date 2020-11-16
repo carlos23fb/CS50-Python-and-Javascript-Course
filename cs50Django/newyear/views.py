@@ -13,3 +13,7 @@ def newYear(request):
     return render(request, "newyear/newYear.html", {
         "newyear": now.month == 1 and now.day == 1
     })
+
+
+def hello(request):
+    return HttpResponse("Hi")
