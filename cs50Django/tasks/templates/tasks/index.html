@@ -1,0 +1,23 @@
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+<h2>Html tasks</h2>
+<br />
+<div class="container">
+  <table class="ui inverted table">
+    <thead>
+      <tr>
+        <th>Task Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for task in tasks %}
+      <tr>
+        <td data-label="Name">{{task}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<a href="{% url 'tasks:add' %}">Add a new Task</a>
+{% endblock %}
