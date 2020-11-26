@@ -30,6 +30,6 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return render(request, "users/login.html",{
+    return render(request, "users/login.html", {
         "message": "Logged Out."
     })
