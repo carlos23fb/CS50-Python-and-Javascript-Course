@@ -7,5 +7,10 @@ let counter = 0;
 
 function count(){
     counter += 1;
-    alert(counter);
+    document.querySelector('h2').innerHTML = `Counter ${counter}`;
+    
+}
+
+function heading(){
+    document.querySelector('h1').innerHTML = `Change`;
 }
