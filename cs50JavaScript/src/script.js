@@ -53,3 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
 	
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelector('select').onchange =  function()  {
+		document.querySelector('#dropHello').style.color = this.value;
+	}
+})
