@@ -2,13 +2,18 @@ function hello() {
 	alert('Hello onClick')
 }
 
-
-let counter = 0;
+if (!localStorage.getItem('counter')) {
+	localStorage.setItem('counter', 0)
+}
 
 function count() {
-	counter += 1;
-	document.querySelector('h2').innerHTML = `Counter ${counter}`;
 
+	let counter = localStorage.getItem('counter');
+	counter = parseInt(counter)
+	counter += 1;
+	dataType = typeof (counter)
+	document.querySelector('h2').innerHTML = `${dataType} ${counter}`;
+	localStorage.setItem('counter', counter);
 }
 
 function heading() {
@@ -25,6 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		const name = document.querySelector('#name').value;
 		alert(name)
 	};
+})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	let current = localStorage.getItem('counter');
+	current = parseInt(current);
+	let dataType = typeof(current);
+	document.querySelector('h2').innerHTML = `${dataType} ${current}`;
 })
 
 
@@ -45,17 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	document.querySelectorAll('#button').forEach(input => {
-		input.onclick = () =>{
+		input.onclick = () => {
 			document.querySelector('#hello').style.color = input.dataset.color;
 		}
-	}) 
+	})
 });
 document.addEventListener('DOMContentLoaded', () => {
-	
+
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-	document.querySelector('select').onchange =  function()  {
+	document.querySelector('select').onchange = function () {
 		document.querySelector('#dropHello').style.color = this.value;
 	}
 })
