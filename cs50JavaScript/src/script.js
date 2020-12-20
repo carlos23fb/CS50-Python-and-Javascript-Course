@@ -44,25 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
 // * Change font color to red
 document.addEventListener('DOMContentLoaded', () => {
 
-	// document.querySelector('#red').onclick = function () {
-	// 	document.querySelector('#hello').style.color = 'red';
-	// }
 
-	// document.querySelector('#blue').onclick = function () {
-	// 	document.querySelector('#hello').style.color = 'blue';
-	// }
-
-	// document.querySelector('#green').onclick = function () {
-	// 	document.querySelector('#hello').style.color = 'green';
-	// }
-
-
+// TODO:
 	document.querySelectorAll('#button').forEach(input => {
 		input.onclick = () => {
 			document.querySelector('#hello').style.color = input.dataset.color;
 		}
 	})
 });
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
 })
@@ -71,4 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.querySelector('select').onchange = function () {
 		document.querySelector('#dropHello').style.color = this.value;
 	}
-})
+});
