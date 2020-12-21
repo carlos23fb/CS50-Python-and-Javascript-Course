@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+from django.contrib import admin
+
+# Register your models here.
+=======
 from django.contrib import admin
 
 
@@ -16,3 +21,4 @@ class PassangerAdmin(admin.ModelAdmin):
 admin.site.register(Airport)
 admin.site.register(Flight, FlightAdmin)
 admin.site.register(Passanger, PassangerAdmin)
+>>>>>>> 2107349304d3726ad311440039b24188491d769b

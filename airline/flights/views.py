@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+from django.shortcuts import render
+
+# Create your views here.
+=======
 from django.http import HttpResponseRedirect
 from flights.models import Flight, Passanger
 from django.shortcuts import render
@@ -28,3 +33,4 @@ def book(request, flight_id):
         passanger = Passanger.objects.get(pk=int(request.POST["passanger"]))
         passanger.flights.add(flight)
         return HttpResponseRedirect(reverse("flight", args=(flight.id,)))
+>>>>>>> 2107349304d3726ad311440039b24188491d769b
